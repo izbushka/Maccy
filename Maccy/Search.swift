@@ -41,16 +41,48 @@ class Search {
       return within.map { SearchResult(object: $0) }
     }
 
+    let results: [SearchResult]
     switch Defaults[.searchMode] {
     case .mixed:
-      return mixedSearch(string: string, within: within)
+      results = mixedSearch(string: string, within: within)
     case .regexp:
-      return simpleSearch(string: string, within: within, options: .regularExpression)
+      results = simpleSearch(string: string, within: within, options: .regularExpression)
     case .fuzzy:
-      return fuzzySearch(string: string, within: within)
+      results = fuzzySearch(string: string, within: within)
     default:
-      return simpleSearch(string: string, within: within, options: .caseInsensitive)
+      results = simpleSearch(string: string, within: within, options: .caseInsensitive)
     }
+
+    return prefixMatchesFirst(results)
+  }
+
+  // Stable partition: items whose match starts at the beginning of the text
+  // (ignoring leading whitespace) go first, preserving the original order otherwise.
+  private func prefixMatchesFirst(_ results: [SearchResult]) -> [SearchResult] {
+    var prefixMatches: [SearchResult] = []
+    var otherMatches: [SearchResult] = []
+    for result in results {
+      if isPrefixMatch(result) {
+        prefixMatches.append(result)
+      } else {
+        otherMatches.append(result)
+      }
+    }
+    return prefixMatches + otherMatches
+  }
+
+  private func isPrefixMatch(_ result: SearchResult) -> Bool {
+    guard let start = result.ranges.map(\.lowerBound).min() else {
+      return false
+    }
+
+    let title = result.object.title
+    guard start >= title.startIndex, start <= title.endIndex else {
+      return false
+    }
+
+    // "·", "⏎" and "⇥" are how whitespace is shown when special symbols are enabled.
+    return title[title.startIndex..<start].allSatisfy { $0.isWhitespace || "·⏎⇥".contains($0) }
   }
 
   private func fuzzySearch(string: String, within: [Searchable]) -> [SearchResult] {

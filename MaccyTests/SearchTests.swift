@@ -231,6 +231,20 @@ class SearchTests: XCTestCase {
     XCTAssertEqual(search("m"), [])
   }
 
+  func testPrefixMatchesFirst() {
+    items = [
+      HistoryItemDecorator(historyItemWithTitle("xxx foo")),
+      HistoryItemDecorator(historyItemWithTitle("foo bar")),
+      HistoryItemDecorator(historyItemWithTitle("yyy foo")),
+      HistoryItemDecorator(historyItemWithTitle("  foo baz"))
+    ]
+
+    for mode in [Search.Mode.exact, .regexp, .mixed] {
+      Defaults[.searchMode] = mode
+      XCTAssertEqual(search("foo").map(\.object.title), [1, 3, 0, 2].map { items[$0].title })
+    }
+  }
+
   private func search(_ string: String) -> [Search.SearchResult] {
     return Search().search(string: string, within: items)
   }
