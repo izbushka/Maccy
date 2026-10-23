@@ -12,3 +12,5 @@
 "NumberOfCopies" = "จำนวนการคัดลอก";
 "SortByTooltip" = "ค่าเริ่มต้น: เวลาคัดลอกสุดท้าย";
 "CurrentSizeTooltip" = "ขนาดปัจจุบันบนดิสก์";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

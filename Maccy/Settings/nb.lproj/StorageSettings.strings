@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "Tidspunkt første kopiering";
 "NumberOfCopies" = "Antall ganger kopiert";
 "SortByTooltip" = "Standard: Tidspunkt siste kopiering.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

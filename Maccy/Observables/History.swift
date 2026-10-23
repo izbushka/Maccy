@@ -114,6 +114,12 @@ class History: ItemsContainer { // swiftlint:disable:this type_body_length
     }
 
     Task {
+      for await maxImages in Defaults.updates(.maxImages, initial: false) {
+        limitImages(to: maxImages)
+      }
+    }
+
+    Task {
       for await _ in Defaults.updates(.imageMaxHeight, initial: false) {
         for item in items {
           item.cleanupImages()
@@ -133,6 +139,7 @@ class History: ItemsContainer { // swiftlint:disable:this type_body_length
     filteredUnpinnedItems = allUnpinnedItems
 
     limitHistorySize(to: Defaults[.size])
+    limitImages(to: Defaults[.maxImages])
 
     updateShortcuts()
     // Ensure that panel size is proper *after* loading all items.
@@ -145,6 +152,16 @@ class History: ItemsContainer { // swiftlint:disable:this type_body_length
   private func limitHistorySize(to maxSize: Int) {
     if allUnpinnedItems.count >= maxSize {
       allUnpinnedItems[maxSize...].forEach(delete)
+    }
+  }
+
+  @MainActor
+  private func limitImages(to maxImages: Int) {
+    let images = allUnpinnedItems
+      .filter(\.item.isImage)
+      .sorted { $0.item.lastCopiedAt > $1.item.lastCopiedAt }
+    if images.count > maxImages {
+      images[maxImages...].forEach(delete)
     }
   }
 
@@ -210,6 +227,9 @@ class History: ItemsContainer { // swiftlint:disable:this type_body_length
     } else {
       itemDecorator = HistoryItemDecorator(item)
       insertUnpinned(itemDecorator)
+      if item.isImage {
+        limitImages(to: Defaults[.maxImages])
+      }
     }
 
     if searchQuery.isEmpty {

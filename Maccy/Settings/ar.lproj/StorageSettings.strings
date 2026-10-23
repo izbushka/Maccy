@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "وقت النسخة الأولى";
 "NumberOfCopies" = "عدد النسخ";
 "SortByTooltip" = "الافتراضي: وقت النسخة الأخيرة.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

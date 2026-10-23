@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "";
 "ShowHexColorSwatch" = "Εμφάνιση δείγματος δεκαεξαδικού χρώματος";
 "ShowHexColorSwatchTooltip" = "Εμφάνιση δείγματος χρώματος δίπλα σε δεκαεξαδικούς κωδικούς χρωμάτων.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

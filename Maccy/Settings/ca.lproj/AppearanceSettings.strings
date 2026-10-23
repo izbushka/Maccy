@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "";
 "ShowHexColorSwatch" = "Mostra la mostra de color hexadecimal";
 "ShowHexColorSwatchTooltip" = "Mostra la mostra de color al costat dels codis de color hexadecimals.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

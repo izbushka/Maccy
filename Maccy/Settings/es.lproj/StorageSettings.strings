@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "Más antiguos, primero";
 "NumberOfCopies" = "Número de copias";
 "SortByTooltip" = "Por defecto: Más nuevos, primero.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

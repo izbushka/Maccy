@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ Apasă ⌘, (command+comma) pentru a deschide preferințele atunci când subsolul este ascuns.";
 "ShowHexColorSwatch" = "Afișare mostră de culoare hexazecimală";
 "ShowHexColorSwatchTooltip" = "Afișare mostră de culoare lângă codurile de culoare hexazecimale.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

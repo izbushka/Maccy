@@ -167,10 +167,11 @@ class ClipboardTests: XCTestCase {
     waitForExpectations(timeout: 2)
   }
 
-  func testIgnoreTransientTypes() {
+  func testDoesNotIgnoreTransientTypes() {
     let hookExpectation = expectation(description: "Hook is called")
-    hookExpectation.isInverted = true
-    clipboard.onNewCopy({ (_: HistoryItem) in
+    clipboard.onNewCopy({ (item: HistoryItem) in
+      XCTAssertEqual(item.text, "bar")
+      XCTAssertFalse(item.contents.contains(where: { $0.type == self.transientType.rawValue }))
       hookExpectation.fulfill()
     })
     clipboard.start()

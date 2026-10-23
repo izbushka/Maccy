@@ -1,3 +1,4 @@
+import Defaults
 import SwiftData
 import SwiftUI
 
@@ -7,6 +8,8 @@ struct ContentView: View {
   @State private var scenePhase: ScenePhase = .background
 
   @FocusState private var searchFocused: Bool
+
+  @Default(.animations) private var animations
 
   var body: some View {
     ZStack {
@@ -32,9 +35,9 @@ struct ContentView: View {
 
               FooterView(footer: appState.footer)
             }
-            .animation(.default.speed(3), value: appState.history.items)
+            .animation(animations ? .default.speed(3) : nil, value: appState.history.items)
             .animation(
-              .default.speed(3),
+              animations ? .default.speed(3) : nil,
               value: appState.history.pasteStack?.id
             )
             .padding(.horizontal, Popup.horizontalPadding)
@@ -56,7 +59,7 @@ struct ContentView: View {
         try? await appState.history.load()
       }
     }
-    .animation(.easeInOut(duration: 0.2), value: appState.searchVisible)
+    .animation(animations ? .easeInOut(duration: 0.2) : nil, value: appState.searchVisible)
     .environment(appState)
     .environment(modifierFlags)
     .environment(\.scenePhase, scenePhase)

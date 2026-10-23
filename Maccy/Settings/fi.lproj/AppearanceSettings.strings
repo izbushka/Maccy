@@ -33,3 +33,5 @@
 "PopupAtLastPosition" = "";
 "ShowTitleBeforeSearchField" = "";
 "OpenPreferencesWarning" = "";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

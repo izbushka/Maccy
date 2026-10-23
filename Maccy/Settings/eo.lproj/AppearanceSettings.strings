@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "";
 "ShowHexColorSwatch" = "Montri kolorspecimenon de deksesuma koloro";
 "ShowHexColorSwatchTooltip" = "Montri kolorspecimenon apud deksesumaj kolorkodoj.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

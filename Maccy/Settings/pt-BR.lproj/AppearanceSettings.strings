@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ Pressione ⌘, (command+comma) para abrir as preferências quando o rodapé estiver oculto.";
 "ShowHexColorSwatch" = "Mostrar amostra de cor hexadecimal";
 "ShowHexColorSwatchTooltip" = "Mostrar amostra de cor ao lado dos códigos de cor hexadecimais.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

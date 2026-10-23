@@ -36,3 +36,5 @@
 "OpenPreviewAutomatically" = "បើកការមើលមុនដោយស្វ័យប្រវត្តិ";
 "ShowHexColorSwatch" = "បង្ហាញគំរូពណ៌ Hex";
 "ShowHexColorSwatchTooltip" = "បង្ហាញគំរូពណ៌នៅក្បែរកូដពណ៌ Hex។";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

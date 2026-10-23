@@ -12,3 +12,5 @@
 "NumberOfCopies" = "பிரதிகளின் எண்ணிக்கை";
 "SortByTooltip" = "இயல்புநிலை: கடைசி நகலின் நேரம்.";
 "CurrentSizeTooltip" = "";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

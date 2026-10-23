@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "पहली प्रति का समय";
 "NumberOfCopies" = "प्रतियों की संख्या";
 "SortByTooltip" = "डिफ़ॉल्ट: अंतिम प्रति का समय।";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

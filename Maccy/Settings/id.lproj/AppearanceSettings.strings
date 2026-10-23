@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ Tekan ⌘, (cmd + koma) untuk membuka preferensi ketika footer tersembunyi.";
 "ShowHexColorSwatch" = "Tampilkan contoh warna hex";
 "ShowHexColorSwatchTooltip" = "Tampilkan contoh warna di samping kode warna hex.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

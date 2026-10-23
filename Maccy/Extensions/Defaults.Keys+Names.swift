@@ -24,6 +24,7 @@ nonisolated extension Defaults.Keys {
   nonisolated(unsafe) private static let preferencesSuite: UserDefaults = .standard
 #endif
 
+  static let animations = Key<Bool>("animations", default: false, suite: preferencesSuite)
   static let clearOnQuit = Key<Bool>("clearOnQuit", default: false, suite: preferencesSuite)
   static let clearSystemClipboard = Key<Bool>("clearSystemClipboard", default: false, suite: preferencesSuite)
   static let clipboardCheckInterval = Key<Double>("clipboardCheckInterval", default: 0.5, suite: preferencesSuite)
@@ -49,6 +50,7 @@ nonisolated extension Defaults.Keys {
   )
   static let imageMaxHeight = Key<Int>("imageMaxHeight", default: 40, suite: preferencesSuite)
   static let lastReviewRequestedAt = Key<Date>("lastReviewRequestedAt", default: Date.now, suite: preferencesSuite)
+  static let maxImages = Key<Int>("maxImages", default: 5, suite: preferencesSuite)
   static let menuIcon = Key<MenuIcon>("menuIcon", default: .maccy, suite: preferencesSuite)
   static let migrations = Key<[String: Bool]>("migrations", default: [:], suite: preferencesSuite)
   static let numberOfUsages = Key<Int>("numberOfUsages", default: 0, suite: preferencesSuite)

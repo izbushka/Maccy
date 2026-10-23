@@ -36,3 +36,5 @@
 "ShowApplicationIcons" = "Паказаць значкі прыкладанняў";
 "ShowHexColorSwatch" = "Паказваць узор шаснаццатковага колеру";
 "ShowHexColorSwatchTooltip" = "Паказваць узор колеру побач з шаснаццатковымі кодамі колераў.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

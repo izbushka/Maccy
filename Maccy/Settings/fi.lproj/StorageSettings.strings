@@ -12,3 +12,5 @@
 "Text" = "";
 "Images" = "";
 "SizeTooltip" = "";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

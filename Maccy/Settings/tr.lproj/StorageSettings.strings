@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "İlk kopyanın zamanı";
 "NumberOfCopies" = "Kopya sayısı";
 "SortByTooltip" = "Saptanmış: Son kopyanın zamanı.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

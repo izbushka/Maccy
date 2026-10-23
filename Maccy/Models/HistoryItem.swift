@@ -196,6 +196,11 @@ class HistoryItem {
     return cachedDecodedImage
   }
 
+  // Checks only content types so that image data is not loaded.
+  var isImage: Bool {
+    contents.contains { Self.imageTypes.contains(NSPasteboard.PasteboardType($0.type)) } || universalClipboardImage
+  }
+
   var rtfData: Data? { contentData([.rtf]) }
   var rtf: NSAttributedString? {
     guard let data = rtfData else {

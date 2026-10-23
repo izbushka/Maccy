@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "Pirmosios kopijos laikas";
 "NumberOfCopies" = "Kopijų skaičius";
 "SortByTooltip" = "Numatytoji reikšmė: Paskutinės kopijos laikas.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

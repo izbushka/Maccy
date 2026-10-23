@@ -12,3 +12,5 @@
 "SizeTooltip" = "Колькасць элементаў, якія будуць захоўвацца.\nПадставова: 200.";
 "SortBy" = "Сартаваць па:";
 "CurrentSizeTooltip" = "Бягучы памер на дыску.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

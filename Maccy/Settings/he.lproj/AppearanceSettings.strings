@@ -36,3 +36,5 @@
 "ShowApplicationIcons" = "הצג סמלי יישומים";
 "ShowHexColorSwatch" = "הצג דוגמית צבע הקסדצימלי";
 "ShowHexColorSwatchTooltip" = "הצג דוגמית צבע ליד קודי צבע הקסדצימליים.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "کاتی یەکەم کۆپی";
 "NumberOfCopies" = "ژمارەی کۆپییەکان";
 "SortByTooltip" = "بنەڕەت: کاتی دوایین کۆپی.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

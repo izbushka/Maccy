@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "最初にコピーした日時";
 "NumberOfCopies" = "コピー回数";
 "SortByTooltip" = "デフォルト：最後にコピーした日時。";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

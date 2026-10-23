@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "";
 "ShowHexColorSwatch" = "نمایش نمونه رنگ هگزادسیمال";
 "ShowHexColorSwatchTooltip" = "نمایش نمونه رنگ در کنار کدهای رنگ هگزادسیمال.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

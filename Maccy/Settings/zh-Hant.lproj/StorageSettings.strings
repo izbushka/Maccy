@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "首次拷貝時間";
 "NumberOfCopies" = "拷貝次數";
 "SortByTooltip" = "預設：上次拷貝時間。";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

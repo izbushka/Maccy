@@ -36,3 +36,5 @@
 "PinToTop" = "Yuqorida";
 "ShowHexColorSwatch" = "Hex rang namunasini koʻrsatish";
 "ShowHexColorSwatchTooltip" = "Hex rang kodlari yonida rang namunasini koʻrsatish.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

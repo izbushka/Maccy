@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ Nhấn phím ⌘, (command+comma) để mở cài đặt khi phần chân trang bị ẩn.";
 "ShowHexColorSwatch" = "Hiển thị mẫu màu hex";
 "ShowHexColorSwatchTooltip" = "Hiển thị mẫu màu bên cạnh mã màu hex.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

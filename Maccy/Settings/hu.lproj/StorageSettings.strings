@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "Első másolás ideje";
 "NumberOfCopies" = "Másolások száma";
 "SortByTooltip" = "Alapértelmezett: Utolsó másolás ideje.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

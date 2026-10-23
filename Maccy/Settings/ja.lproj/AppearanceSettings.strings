@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ フッターが隠されている時に設定を開くには⌘, (command+comma)を押してください。";
 "ShowHexColorSwatch" = "16進カラースウォッチを表示";
 "ShowHexColorSwatchTooltip" = "16進カラーコードの横にカラースウォッチを表示します。";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

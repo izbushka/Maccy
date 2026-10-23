@@ -106,9 +106,15 @@ class FloatingPanel<Content: View>: NSPanel, NSWindowDelegate {
     var newOrigin = frame.origin
     newOrigin.y += (frame.height - newSize.height)
 
+    let newFrame = NSRect(origin: newOrigin, size: newSize)
+    guard Defaults[.animations] else {
+      setFrame(newFrame, display: true)
+      return
+    }
+
     NSAnimationContext.runAnimationGroup { (context) in
       context.duration = 0.2
-      animator().setFrame(NSRect(origin: newOrigin, size: newSize), display: true)
+      animator().setFrame(newFrame, display: true)
     }
   }
 

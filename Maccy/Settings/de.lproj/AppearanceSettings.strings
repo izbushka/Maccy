@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ Um die Einstellungen zu öffnen, halte ⌘, (command+comma) gedrückt.";
 "ShowHexColorSwatch" = "Hex-Farbmuster anzeigen";
 "ShowHexColorSwatchTooltip" = "Farbmuster neben Hex-Farbcodes anzeigen.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

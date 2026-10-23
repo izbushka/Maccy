@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "Čas prvního kopírování";
 "NumberOfCopies" = "Počet kopírování";
 "SortByTooltip" = "Výchozí: Čas posledního kopírování.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

@@ -12,3 +12,5 @@
 "Text" = "អត្ថបទ";
 "Images" = "រូបភាព";
 "SizeTooltip" = "ចំនួនធាតុប្រវត្តិដែលត្រូវរក្សាទុក។\nលំនាំដើម: 200។";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

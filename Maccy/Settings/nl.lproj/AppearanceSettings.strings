@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ Druk op ⌘, (command+comma) om voorkeuren te openen wanneer de voettekst verborgen is.";
 "ShowHexColorSwatch" = "Hex kleurstaal tonen";
 "ShowHexColorSwatchTooltip" = "Toon kleurstaal naast hex kleurcodes.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

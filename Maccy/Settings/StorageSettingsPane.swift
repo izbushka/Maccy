@@ -56,6 +56,7 @@ struct StorageSettingsPane: View {
     }
   }
 
+  @Default(.maxImages) private var maxImages
   @Default(.size) private var size
   @Default(.sortBy) private var sortBy
 
@@ -109,6 +110,19 @@ struct StorageSettingsPane: View {
               storageSize = Storage.shared.size
             }
         }
+      }
+
+      Settings.Section(label: { Text("MaxImages", tableName: "StorageSettings") }) {
+        HStack {
+          TextField("", value: $maxImages, formatter: sizeFormatter)
+            .frame(width: 80)
+            .help(Text("MaxImagesTooltip", tableName: "StorageSettings"))
+            .accessibilityLabel(Text("MaxImages", tableName: "StorageSettings"))
+          Stepper("", value: $maxImages, in: 1...999)
+            .labelsHidden()
+            .accessibilityLabel(Text("MaxImages", tableName: "StorageSettings"))
+        }
+        .disabled(!viewModel.saveImages)
       }
 
       Settings.Section(label: { Text("SortBy", tableName: "StorageSettings") }) {

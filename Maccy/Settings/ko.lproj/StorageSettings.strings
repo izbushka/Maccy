@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "처음 복사한 시간";
 "NumberOfCopies" = "복사 횟수";
 "SortByTooltip" = "기본값: 마지막 복사한 시간.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

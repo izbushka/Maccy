@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "Čas prvega kopiranja";
 "NumberOfCopies" = "Število kopiranj";
 "SortByTooltip" = "Privzeto: Čas zadnjega kopiranja.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

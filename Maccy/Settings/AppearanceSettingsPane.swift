@@ -192,6 +192,11 @@ struct AppearanceSettingsPane: View {
         }
         .help(Text("ShowHexColorSwatchTooltip", tableName: "AppearanceSettings"))
 
+        Defaults.Toggle(key: .animations) {
+          Text("Animations", tableName: "AppearanceSettings")
+        }
+        .help(Text("AnimationsTooltip", tableName: "AppearanceSettings"))
+
         Defaults.Toggle(key: .showFooter) {
           Text("ShowFooter", tableName: "AppearanceSettings")
         }

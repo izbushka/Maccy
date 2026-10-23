@@ -12,3 +12,5 @@
 "SizeTooltip" = "Nombre d'elements guardats a l'històric.\nPer defecte: 200.";
 "LastCopiedAt" = "Temps de l'última còpia";
 "CurrentSizeTooltip" = "";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

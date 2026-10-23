@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ Nospiediet taustiņu ⌘, (command+comma) lai atvērtu preferences, ja kājene ir paslēpta.";
 "ShowHexColorSwatch" = "Rādīt heksadecimālās krāsas paraugu";
 "ShowHexColorSwatchTooltip" = "Rādīt krāsas paraugu blakus heksadecimālajiem krāsu kodiem.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

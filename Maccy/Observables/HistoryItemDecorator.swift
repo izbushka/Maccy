@@ -27,7 +27,9 @@ class HistoryItemDecorator: Identifiable, Hashable, HasVisibility {
   }
   var shortcuts: [KeyShortcut] = []
 
-  var application: String? {
+  // Cached because it is used in accessibility label of every visible row.
+  @ObservationIgnored
+  private(set) lazy var application: String? = {
     if item.universalClipboard {
       return "iCloud"
     }
@@ -39,7 +41,7 @@ class HistoryItemDecorator: Identifiable, Hashable, HasVisibility {
     }
 
     return url.deletingPathExtension().lastPathComponent
-  }
+  }()
 
   var hasImage: Bool { item.image != nil }
   var hasFileURLs: Bool { !item.fileURLs.isEmpty }
@@ -49,7 +51,28 @@ class HistoryItemDecorator: Identifiable, Hashable, HasVisibility {
   var previewImageGenerationTask: Task<(), Error>?
   var thumbnailImageGenerationTask: Task<(), Error>?
   var previewImage: NSImage?
-  private(set) var previewText = SizedString("")
+  // Computed lazily because it requires parsing RTF/HTML which is slow
+  // and is only needed when the item is previewed or edited.
+  var previewText: SizedString {
+    _ = previewTextRevision
+    if let cachedPreviewText {
+      return cachedPreviewText
+    }
+
+    let previewText = withObservationTracking {
+      SizedString(item.previewableText, maxParagraphBytes: Self.previewMaxParagraphSize)
+    } onChange: { [weak self] in
+      DispatchQueue.main.async { [weak self] in
+        self?.cachedPreviewText = nil
+        self?.previewTextRevision += 1
+      }
+    }
+    cachedPreviewText = previewText
+    return previewText
+  }
+  private var previewTextRevision = 0
+  @ObservationIgnored
+  private var cachedPreviewText: SizedString?
   var thumbnailImage: NSImage?
   var applicationImage: ApplicationImage
 
@@ -83,7 +106,7 @@ class HistoryItemDecorator: Identifiable, Hashable, HasVisibility {
   // Describe the complete item independently of its potentially truncated visual content.
   var accessibilityLabel: String {
     var parts: [String] = []
-    if hasImage, let image = item.image {
+    if item.isImage, let image = item.image {
       let size = image.pixelSize
       parts.append(
         String(
@@ -121,7 +144,6 @@ class HistoryItemDecorator: Identifiable, Hashable, HasVisibility {
 
     synchronizeItemPin()
     synchronizeItemTitle()
-    synchronizeItemText()
   }
 
   @MainActor
@@ -250,16 +272,6 @@ class HistoryItemDecorator: Identifiable, Hashable, HasVisibility {
         guard let self else { return }
         self.title = self.item.title
         self.synchronizeItemTitle()
-      }
-    }
-  }
-
-  private func synchronizeItemText() {
-    previewText = withObservationTracking {
-      SizedString(item.previewableText, maxParagraphBytes: Self.previewMaxParagraphSize)
-    } onChange: { [weak self] in
-      DispatchQueue.main.async { [weak self] in
-        self?.synchronizeItemText()
       }
     }
   }

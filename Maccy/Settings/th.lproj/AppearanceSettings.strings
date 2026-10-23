@@ -36,3 +36,5 @@
 "ShowApplicationIcons" = "แสดงไอคอนแอปพลิเคชั่น";
 "ShowHexColorSwatch" = "แสดงตัวอย่างสีเลขฐานสิบหก";
 "ShowHexColorSwatchTooltip" = "แสดงตัวอย่างสีถัดจากรหัสสีเลขฐานสิบหก";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

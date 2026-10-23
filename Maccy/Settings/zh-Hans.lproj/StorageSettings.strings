@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "首次复制时间";
 "NumberOfCopies" = "复制次数";
 "SortByTooltip" = "默认：上次复制时间。";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

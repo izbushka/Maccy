@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ Altbilgi gizliyken ayarları açmak için ⌘, (command+comma)'a basın.";
 "ShowHexColorSwatch" = "Hex renk örneğini göster";
 "ShowHexColorSwatchTooltip" = "Hex renk kodlarının yanında renk örneği göster.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

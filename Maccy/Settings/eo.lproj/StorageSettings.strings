@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "Momento de unua kopio";
 "NumberOfCopies" = "Nombro de kopioj";
 "SortByTooltip" = "Defaŭlta: Momento de lasta kopio.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

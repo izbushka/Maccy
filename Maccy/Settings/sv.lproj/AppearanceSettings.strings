@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "";
 "ShowHexColorSwatch" = "Visa hexadecimalt färgprov";
 "ShowHexColorSwatchTooltip" = "Visa färgprov bredvid hexadecimala färgkoder.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

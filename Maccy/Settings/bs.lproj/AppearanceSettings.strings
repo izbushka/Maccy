@@ -36,3 +36,5 @@
 "ShowApplicationIcons" = "Prikaži ikone aplikacija";
 "ShowHexColorSwatch" = "Prikaži uzorak hex boje";
 "ShowHexColorSwatchTooltip" = "Prikaži uzorak boje pored hex kodova boja.";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";

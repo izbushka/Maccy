@@ -12,3 +12,5 @@
 "FirstCopiedAt" = "Pirmās kopijas laiks";
 "NumberOfCopies" = "Kopiju skaits";
 "SortByTooltip" = "Noklusējums: pēdējās kopijas laiks.";
+"MaxImages" = "Images limit:";
+"MaxImagesTooltip" = "Number of images to keep in history. Pinned images are not counted.\nDefault: 5.";

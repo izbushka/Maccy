@@ -36,3 +36,5 @@
 "OpenPreferencesWarning" = "⚠️ 隱藏底部選單時，可按 ⌘, (command+comma) 顯示偏好設定。";
 "ShowHexColorSwatch" = "顯示十六進位顏色色塊";
 "ShowHexColorSwatchTooltip" = "在十六進位顏色代碼旁邊顯示顏色色塊。";
+"Animations" = "Animations";
+"AnimationsTooltip" = "Animate the history list and popup resizing.";
